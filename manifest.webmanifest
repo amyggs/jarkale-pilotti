@@ -1,6 +1,6 @@
 {
-  "name": "Järkäle Pilotti",
-  "short_name": "Pilotti",
+  "name": "Järkäle Tracking",
+  "short_name": "Järkäle",
   "description": "Henkilökohtainen hyvinvointi- ja treeniseurantasovellus",
   "start_url": "./",
   "display": "standalone",
