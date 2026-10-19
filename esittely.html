@@ -111,6 +111,17 @@ details.older .ver{font-size:12px;color:var(--dim);letter-spacing:.06em;text-tra
 .ai b{font:800 16px/1 Manrope,system-ui,sans-serif;}
 .ai .price{float:right;font-size:12px;font-weight:700;color:var(--green);}
 
+/* Teemakuvat: vaakarulla */
+.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;margin:6px -16px 0;padding:4px 16px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.shots::-webkit-scrollbar{display:none;}
+.shot{flex:none;width:44%;max-width:190px;scroll-snap-align:start;margin:0;}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:420/855;object-fit:cover;border-radius:16px;border:1px solid var(--bord);background:var(--surf2);}
+.shot figcaption{font:800 13px/1.2 Manrope,system-ui,sans-serif;margin-top:8px;color:var(--text);}
+.shot figcaption span{display:block;font-weight:500;font-size:12px;color:var(--dim);margin-top:2px;}
+.why{display:grid;gap:10px;margin:4px 0 16px;}
+.why .feat{display:flex;gap:12px;align-items:flex-start;}
+.why .feat .fi{flex:none;margin:0;}
+
 /* Asennus ja loppu */
 .final{background:var(--hero-bg);color:var(--hero-ink);text-align:center;padding:44px 20px 40px;position:relative;overflow:hidden;}
 .final h2{font:800 38px/1 Manrope,system-ui,sans-serif;letter-spacing:-.03em;margin:10px 0 10px;}
@@ -165,6 +176,19 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
   <p class="demo-cap">Edellinen kerta harmaana, yksi napautus kuittaa. + nostaa painoa. Tallennus lyö leiman.</p>
 </div>
 
+<!-- SALI -->
+<section class="section rv">
+  <span class="tag">Sali</span>
+  <h2>Nopein tapa kirjata treeni</h2>
+  <div class="why">
+    <div class="feat"><div class="fi"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.8 5 13.4h6.6l-1 7.8 8-10.7h-6.7z"/></svg></div><div><b>Sarja yhdellä napautuksella</b><span>Edellisen kerran kilot ja toistot ovat valmiina harmaina. Jos teit saman, kuittaa. Painoa nostat − / + -napeilla avaamatta näppäimistöä.</span></div></div>
+    <div class="feat"><div class="fi"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg></div><div><b>Omat liikkeet, ei liikekirjastoa</b><span>Kirjoitat liikkeen nimen itse, juuri niin kuin sen sanot. Et etsi listalta, etkä ole naimisissa kenenkään muun liikerekisterin kanssa. Lihasryhmän Järkäle päättelee nimestä.</span></div></div>
+    <div class="feat"><div class="fi"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.2H6.6A1.6 1.6 0 0 0 5 4.8v14.4a1.6 1.6 0 0 0 1.6 1.6h10.8a1.6 1.6 0 0 0 1.6-1.6V7.7z"/><path d="M14.5 3.2v4.5H19M8.5 12.5h7M8.5 16h4.5"/></svg></div><div><b>Ohjelma sisään tekstinä</b><span>Liitä valmentajan ohjelma suoraan muistiinpanoista. Järkäle tunnistaa treenipäivät, sarjat ja supersarjat ja ohittaa ohjetekstit. Ohjelmia voi olla rajattomasti.</span></div></div>
+  </div>
+  <p>Käyttöönotto: <strong>Asetukset → Treeni- ja kausiasetukset → Saliohjelmat ja treeniseuranta.</strong></p>
+  <p style="margin:0">Ajastimen ääni ja värinä toimivat, kun Järkäle on auki näytöllä. Selainsovellus ei pysty hälyttämään lukitulla näytöllä.</p>
+</section>
+
 <!-- MITEN SE TOIMII -->
 <section class="section rv">
   <span class="tag">Miten se toimii</span>
@@ -198,16 +222,15 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
 
 <!-- UUTTA -->
 <section class="section rv" id="uutta">
-  <span class="tag">Uutta · 2.18.66 · lokakuu 2026</span>
-  <h2>Treeni sujuvammaksi</h2>
+  <span class="tag">Uutta · 2.18.76 · lokakuu 2026</span>
+  <h2>Uusi ilme ja selkeämpi kirjaus</h2>
   <div class="card">
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Painon − / + -napit.</strong> Seuraavana vuorossa olevan sarjan kg-kentässä on − ja +. Säätö lähtee edellisen kerran painosta, joten näppäimistöä ei tarvitse avata. Askeleen (0,5–5 kg, oletus 1,25) voi valita: Asetukset → Treeni- ja kausiasetukset.</span></div>
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Kiinnitetty huomio.</strong> Liikkeen huomion voi kiinnittää liikkeeseen (Huomio → Kiinnitä liikkeeseen), jolloin esim. "penkki 4, kahva keskelle" näkyy joka treenissä. Tavallinen huomio koskee vain sitä treeniä.</span></div>
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Liikkeet lihasryhmittäin.</strong> Liikkeiden tulokset ja kehitys on jaettu ryhmiin (rinta, selkä, olkapäät, kädet, jalat, muut). Ryhmä päätellään nimestä, ja sen voi vaihtaa liikkeen sivulla.</span></div>
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Tehdyt treenit ja lukutila.</strong> Tallennettu treeni avautuu yhteenvetona, ja sarjoja voi muuttaa Muokkaa treeniä -napista. Huomiot näkyvät yhteenvedossa.</span></div>
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Tallennusleima ja jako kuvana.</strong> Treenin tallennus lyö yhteenvetoon Järkäle-leiman. Jaa-napista treenin voi jakaa tekstinä tai kuvana teeman väreissä.</span></div>
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Uudet käynnistykset.</strong> Järkäle-teemassa musta järkäle putoaa ja halkeaa, Lasi kuplii ja Kaurapuuron lämpimät sävyt valuvat ruudulle.</span></div>
-    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Pienempiä parannuksia.</strong> Arvioitu 1RM näkyy ennätysten yhteydessä ja liikkeen sivulla. Vahvistukset näkyvät Järkäleen omassa ikkunassa. Napit ovat isompia, ja Poista päivän kirjaus on Kirjaa-näkymän alimpana.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Uusi logo ja nimi.</strong> Kotinäytön kuvake on nyt keltainen J. ja nimi Järkäle. Kuvake päivittyy, kun puhelin hakee sovelluksen tiedot uudelleen, mikä voi kestää muutaman päivän.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Kelluva alapalkki.</strong> Järkäle-, Kaurapuuro- ja Lasi-teemoissa alapalkki kelluu sisällön päällä, ja sisältö rullaa sen alta.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Uusi käynnistys.</strong> Järkäle-teemassa keltainen laatta putoaa ja tömähtää, J piirtyy siihen ja piste napsahtaa paikalleen.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Yläreuna teeman väriin.</strong> Puhelimen tilarivi on samaa väriä kuin sovelluksen yläosa kaikissa teemoissa, myös Lasissa.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Kivut tiiviimmin.</strong> Kun kivun taso on merkitty, kortti pienenee yhdeksi riviksi (esim. Hauis oikea · 1/5 · Ennallaan). Napauta riviä muokataksesi. Merkitsemätön kipu pysyy auki.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Ennätysmerkki oikeaan kohtaan.</strong> Merkki näkyy sen kentän kohdalla, joka parani: uusi raskain paino kg-kentässä, enemmän toistoja toistokentässä. Sama ennätys merkitään vain kerran.</span></div>
   </div>
 </section>
 
@@ -215,7 +238,18 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
 <section class="section rv">
   <span class="tag">Teemat</span>
   <h2>Yhdeksän ilmettä</h2>
-  <p>Järkäle (keltamusta oletus), Kaurapuuro, Magnesium, Lasi, Kuusnelonen, Teksti-TV, Manageri, Soitin ja Fosfori. Jokaisessa vaalea ja tumma versio sekä oma käynnistysanimaatio. <strong>Asetukset → Teema.</strong></p>
+  <p>Pyyhkäise ja katso. Jokaisessa on vaalea ja tumma versio sekä oma käynnistysanimaatio. Vaihto: <strong>Asetukset → Teema.</strong></p>
+  <div class="shots">
+    <figure class="shot"><img src="kuvat/teema-ampiainen.webp" alt="Järkäle Järkäle-teemassa" loading="lazy" width="420" height="855"><figcaption>Järkäle<span>keltamusta oletus</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-kaurapuuro.webp" alt="Järkäle Kaurapuuro-teemassa" loading="lazy" width="420" height="855"><figcaption>Kaurapuuro<span>lämmin ja rauhallinen</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-lasi.webp" alt="Järkäle Lasi-teemassa" loading="lazy" width="420" height="855"><figcaption>Lasi<span>huurrettu lasi</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-magnesium.webp" alt="Järkäle Magnesium-teemassa" loading="lazy" width="420" height="855"><figcaption>Magnesium<span>mustavalkoinen</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-kuusnelonen.webp" alt="Järkäle Kuusnelonen-teemassa" loading="lazy" width="420" height="855"><figcaption>Kuusnelonen<span>80-luvun kotitietokone</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-tekstitv.webp" alt="Järkäle Teksti-TV-teemassa" loading="lazy" width="420" height="855"><figcaption>Teksti-TV<span>sivu 100</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-manageri.webp" alt="Järkäle Manageri-teemassa" loading="lazy" width="420" height="855"><figcaption>Manageri<span>90-luvun manageripeli</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-soitin.webp" alt="Järkäle Soitin-teemassa" loading="lazy" width="420" height="855"><figcaption>Soitin<span>metalli ja vihreä LCD</span></figcaption></figure>
+    <figure class="shot"><img src="kuvat/teema-fosfori.webp" alt="Järkäle Fosfori-teemassa" loading="lazy" width="420" height="855"><figcaption>Fosfori<span>vihreä kuvaputki</span></figcaption></figure>
+  </div>
 </section>
 
 <!-- DRIVE -->
@@ -229,15 +263,6 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
     <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Uusi puhelin:</strong> avaa Järkäle, yhdistä samalla Google-tilillä, ja tiedot palaavat.</span></div>
   </div>
   <p style="margin:14px 0 0"><a href="tietosuoja.html">Tietosuoja</a></p>
-</section>
-
-<!-- SALI -->
-<section class="section rv">
-  <span class="tag">Sali</span>
-  <h2>Ohjelma sisään tekstinä</h2>
-  <div class="quote">Edellisen kerran kilot ja toistot näkyvät valmiiksi harmaina. Jos teit saman, yksi napautus tallentaa sarjan.</div>
-  <p>Liitä valmentajan ohjelma suoraan muistiinpanoista – Järkäle tunnistaa treenipäivät, sarjat ja supersarjat ja ohittaa ohjetekstit. Ohjelmia voi olla rajattomasti. Käyttöönotto: <strong>Asetukset → Treeni- ja kausiasetukset → Saliohjelmat ja treeniseuranta.</strong></p>
-  <p style="margin:0">Ajastimen ääni ja värinä toimivat, kun Järkäle on auki näytöllä. Selainsovellus ei pysty hälyttämään lukitulla näytöllä.</p>
 </section>
 
 <!-- HAVAINTO JA AI -->
@@ -260,7 +285,17 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
   <details class="older">
     <summary>Aiemmat versiot</summary>
     <div class="sub">
-      <span class="ver">2.18.43 · lokakuu 2026</span><h3>Ennätykset ja teemat</h3>
+      <span class="ver">2.18.66 · lokakuu 2026</span><h3>Treeni sujuvammaksi</h3>
+      <div class="card">
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Painon − / + -napit.</strong> Seuraavana vuorossa olevan sarjan kg-kentässä on − ja +. Säätö lähtee edellisen kerran painosta, joten näppäimistöä ei tarvitse avata. Askeleen (0,5–5 kg, oletus 1,25) voi valita: Asetukset → Treeni- ja kausiasetukset.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Kiinnitetty huomio.</strong> Liikkeen huomion voi kiinnittää liikkeeseen (Huomio → Kiinnitä liikkeeseen), jolloin esim. "penkki 4, kahva keskelle" näkyy joka treenissä. Tavallinen huomio koskee vain sitä treeniä.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Liikkeet lihasryhmittäin.</strong> Liikkeiden tulokset ja kehitys on jaettu ryhmiin (rinta, selkä, olkapäät, kädet, jalat, muut). Ryhmä päätellään nimestä, ja sen voi vaihtaa liikkeen sivulla.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Tehdyt treenit ja lukutila.</strong> Tallennettu treeni avautuu yhteenvetona, ja sarjoja voi muuttaa Muokkaa treeniä -napista. Huomiot näkyvät yhteenvedossa.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Tallennusleima ja jako kuvana.</strong> Treenin tallennus lyö yhteenvetoon Järkäle-leiman. Jaa-napista treenin voi jakaa tekstinä tai kuvana teeman väreissä.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Uudet käynnistykset.</strong> Järkäle-teemassa musta järkäle putoaa ja halkeaa, Lasi kuplii ja Kaurapuuron lämpimät sävyt valuvat ruudulle.</span></div>
+    <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Pienempiä parannuksia.</strong> Arvioitu 1RM näkyy ennätysten yhteydessä ja liikkeen sivulla. Vahvistukset näkyvät Järkäleen omassa ikkunassa. Napit ovat isompia, ja Poista päivän kirjaus on Kirjaa-näkymän alimpana.</span></div>
+  </div>
+      <span class="ver" style="display:block;margin-top:18px">2.18.43 · lokakuu 2026</span><h3>Ennätykset ja teemat</h3>
       <div class="card">
         <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Ennätyksen hetki.</strong> Ennätyssarjasta puhelin värähtää kahdesti ja liikkeen alle tulee rivi: uusi ennätys ja aiempi paras.</span></div>
         <div class="update"><span class="ck"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.6 4.5L19.5 7"/></svg></span><span><strong>Selkeämpi Treeni-välilehti.</strong> Kierrossa seuraava päivä korostetaan, mutta minkä tahansa päivän voi aloittaa. Ohjelmat omana listanaan.</span></div>
