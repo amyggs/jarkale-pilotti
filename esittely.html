@@ -36,10 +36,9 @@ header{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-
 
 /* Hero */
 .hero{position:relative;overflow:hidden;background:var(--hero-bg);color:var(--hero-ink);padding:46px 20px 40px;text-align:center;}
-.stripes{position:absolute;left:0;right:0;height:14px;background:repeating-linear-gradient(-45deg,var(--y) 0 14px,var(--ink) 14px 28px);background-size:40px 40px;animation:stripeRun 1.6s linear infinite;}
-[data-theme="light"] .stripes{background:repeating-linear-gradient(-45deg,var(--ink) 0 14px,var(--y) 14px 28px);background-size:40px 40px;}
-.stripes.t{top:0}.stripes.b{bottom:0;animation-direction:reverse;}
-@keyframes stripeRun{to{background-position:40px 0}}
+.stripes{position:absolute;left:0;right:0;height:8px;background:repeating-linear-gradient(-45deg,var(--y) 0 8px,var(--ink) 8px 16px);}
+[data-theme="light"] .stripes{background:repeating-linear-gradient(-45deg,var(--ink) 0 8px,var(--y) 8px 16px);}
+.stripes.b{bottom:0}
 .kicker{display:inline-block;font:800 12px/1 Manrope,system-ui,sans-serif;letter-spacing:.32em;padding-left:.32em;color:var(--y);margin:10px 0 14px;}
 [data-theme="light"] .kicker{color:var(--ink);}
 .hero h1{font:800 clamp(40px,12vw,66px)/1 Manrope,system-ui,sans-serif;text-transform:uppercase;letter-spacing:-.03em;}
@@ -157,7 +156,6 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
 
 <!-- HERO -->
 <section class="hero">
-  <div class="stripes t"></div>
   <div class="kicker">PÄIVITTÄINEN SEURANTA</div>
   <h1><span>Paino.</span><span>Uni.</span><span>Treeni.</span><span>Fiilis.</span></h1>
   <p class="lead">Kirjaa päivä minuutissa. Järkäle näyttää, mihin suuntaan asiat menevät – ilman saarnaa.</p>
@@ -333,7 +331,6 @@ footer b{font:800 15px/1 Manrope,system-ui,sans-serif;color:var(--acc);letter-sp
 
 <!-- LOPPU -->
 <section class="final">
-  <div class="stripes t"></div>
   <div class="kicker">VALMIS?</div>
   <h2>Ota käyttöön</h2>
   <p>Avautuu heti selaimessa. Asenna puhelimeen kuin sovellus.</p>
