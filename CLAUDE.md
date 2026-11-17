@@ -4,4 +4,6 @@ Tämä on pilottikäyttäjien versio. **Älä muokkaa tämän repon `index.html`
 
 Vain tämän repon omat tiedostot muokataan täällä: `esittely.html`, `kuvat/` ja `sw.js` (välimuistin etuliite `jarkale-pilotti-v`).
 
+`esittely.html` on myös jarkale.comin etusivu: `release.sh` kopioi sen repoon `amyggs/jarkale-site` ja vaihtaa linkit osoitteeseen app.jarkale.com. Pilotin käyttäjät käyttävät nyt osoitetta app.jarkale.com (repo `amyggs/jarkale-app`); tämä github.io-osoite on siirtymäajan varalla.
+
 Ohjeet, julkaisuprosessi ja tuotteen linja: katso `amyggs/jarkale`-repon `CLAUDE.md`.
